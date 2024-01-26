@@ -10,10 +10,13 @@ module.exports = {
         'white' : '#FFFFFF',
         'black' : '#1D1A1A',
         'black-60' : '#767373',
-        'gray' : '#DFDDDD'
+        'gray' : '#DFDDDD',
+        'orange' : '#E66508',
+        'success' : '#35A40F',
       },
       fontFamily : {
-        sans : ['Lato', 'sans-serif']
+        sans : ['Lato', 'sans-serif'],
+        LatoBold : ['LatoBold', 'sans-serif']
       },
       fontSize : {
         'sm' : ['0.833rem'],

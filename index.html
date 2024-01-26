@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link rel="stylesheet" href="./src/style.css">
     <title>Trends</title>
 </head>
 
-<body>  
-    <section class="px-16 py-6 flex items-center justify-between  border-b  border-black-60">
-        <img src="./assets/images/logo.svg" alt="logo" >
+<body>
+    <header
+        class="px-16 py-6 flex items-center justify-between bg-white border-b  border-black-60 fixed top-0 w-full z-20">
+        <img src="./assets/images/logo.svg" alt="logo">
         <ul class="flex items-center justify-evenly text-lead text-black-60  gap-x-10 ">
             <li class="cursor-pointer  hover:text-black">Home</li>
             <li class="cursor-pointer  hover:text-black">About</li>
@@ -22,10 +23,194 @@
             <li class="cursor-pointer  hover:text-black">Contact</li>
         </ul>
         <div class="flex items-cetner justify-center gap-10">
-            <i class="bi bi-search text-icon"></i>
-            <i class="bi bi-heart text-icon"></i>
-            <i class="bi bi-bag text-icon"></i>
+            <i class="bi bi-search text-icon cursor-pointer"></i>
+            <i class="bi bi-heart text-icon cursor-pointer"></i>
+            <i class="bi bi-bag text-icon cursor-pointer"></i>
         </div>
+    </header>
+    <section class="bg-gray px-16 pt-40 flex p-36">
+        <div class="flex justify-center flex-col gap-10 items-start max-w-lg z-10">
+            <div class="flex gap-6 flex-col">
+                <h1 class="text-black text-title  font-LatoBold">
+                    Explore <span class="text-black-60">and</span> <span class="bg-gray">customize</span> <span
+                        class="text-black-60">your own</span> style
+                </h1>
+                <h4 class="text-lead text-black">Discover new fashion collected around the world.</h4>
+            </div>
+            <div class="">
+                <button class="btnIconLg">
+                    <div class="">Shop now</div>
+                    <i class="bi bi-cart"></i>
+                </button>
+            </div>
+        </div>
+        <div class="absolute top-28 left-[500px] flex  gap-4">
+            <img class="self-end pt-6" src="./assets/images/header_1.jpg" alt="girl wearing nike shoe" width="451">
+            <img class="self-start" src="./assets/images/header_2.jpg" alt="girl wearing nike shoe" width="324">
+        </div>
+    </section>
+    <section class="pt-44 px-16 flex justify-between">
+        <div class="flex flex-col max-w-[600px] gap-10">
+            <h1 class="text-title-2 font-LatoBold text-black-60">Your <span class="text-black">satisfaction</span> is
+                our priority
+            </h1>
+            <div class="">
+                <p class="text-base text-black mb-4">We provide customizable fashion model, offering unparalleled style
+                    at
+                    the most affordable prices. Elevate your wardrobe with personalized fashion that doesn't compromise
+                    on quality or cost.</p>
+                <p class="text-base text-black">At Trends, we stand behind the quality of every product with our
+                    guarantee. Shop confidently and enjoy the convenience of various secure payment methods, ensuring a
+                    seamless and secure shopping experience.</p>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex gap-2 items-center">
+                    <i class="bi bi-patch-check-fill text-orange text-icon"></i>
+                    <p class="text-base">Quality</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="bi bi-tag-fill text-orange text-icon"></i>
+                    <p class="text-base">Affordable</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="bi bi-shield-fill-check text-success text-icon"></i>
+                    <p class="text-base">Safety</p>
+                </div>
+            </div>
+        </div>
+        <img class="h-[321px] object-cover" src="./assets/images/bg_1.jpg" alt="" width="522">
+    </section>
+    <section class="pt-44 flex items-center justify-between gap-12 flex-col pb-4">
+        <h1 class="text-black-60 text-title-2 font-LatoBold text-center w-full">Choose your own <span
+                class="text-black">style</span></h1>
+        <div class="flex justify-between items-center py-4  border-b border-black w-full sticky top-0 z-30 bg-white px-16 ">
+            <div class="flex items-center justify-center gap-8 bg-gray px-8 py-3 w-[542px]">
+                <i class="bi bi-search text-icon"></i>
+                <input type="text" class="text-base flex-1 outline-none  bg-gray " placeholder="Search by name or mark">
+            </div>
+            <div class="flex gap-10">
+                <select name="trend" id="" class="text-base font-LatoBold px-8 py-4 bg-black text-white outline-0 ">
+                    <option value="trend">Trend</option>
+                    <option value="trend">Trends</option>
+                    <option value="trend">Trends</option>
+                    <option value="trend">Trends</option>
+                </select>
+                <select name="gender" id="" class="text-base font-LatoBold px-8 py-4 bg-black text-white outline-0 ">
+                    <option value="trend">Gender</option>
+                    <option value="trend">Trends</option>
+                    <option value="trend">Trends</option>
+                    <option value="trend">Trends</option>
+                </select>
+                <select name="size" id="" class="text-base font-LatoBold px-8 py-4 bg-black text-white outline-0 ">
+                    <option value="trend">Size</option>
+                    <option value="trend">Trends</option>
+                    <option value="trend">Trends</option>
+                    <option value="trend">Trends</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex items-center justify-between w-full flex-wrap gap-y-10 px-16 pt-20">
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_1.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">SkyGlide Athletics</p>
+                    <p class="text-subtitle-2 font-LatoBold">95.18 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Teen</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-41</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_2.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">LunarPulse Boost</p>
+                    <p class="text-subtitle-2 font-LatoBold">84.99 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Teen</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-41</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_3.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">UrbanForce Sne...</p>
+                    <p class="text-subtitle-2 font-LatoBold">98.99 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">All</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-46</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_4.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">Air Jordan</p>
+                    <p class="text-subtitle-2 font-LatoBold">98 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Young</p>
+                    <p class="text-base bg-gray text-black-60 p-1">36-44</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_5.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">SkyGlide Athletics</p>
+                    <p class="text-subtitle-2 font-LatoBold">95.18 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Teen</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-41</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_6.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">SkyGlide Athletics</p>
+                    <p class="text-subtitle-2 font-LatoBold">95.18 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Teen</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-41</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_2.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">SkyGlide Athletics</p>
+                    <p class="text-subtitle-2 font-LatoBold">95.18 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Teen</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-41</p>
+                </div>
+            </div>
+            <div class="w-[260px] flex gap-y-4 relative flex-col">
+                <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
+                <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_4.jpg" alt="" width="260">
+                <div class="flex justify-between items-center">
+                    <p class="text-lead">SkyGlide Athletics</p>
+                    <p class="text-subtitle-2 font-LatoBold">95.18 $</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-base bg-gray text-black-60 p-1">Teen</p>
+                    <p class="text-base bg-gray text-black-60 p-1">24-41</p>
+                </div>
+            </div>
+        </div>
+        <button class="btnIcon">
+            <p class="text-base font-LatoBold">See more</p>
+            <i class="bi bi-three-dots"></i>
+        </button>
     </section>
 </body>
 

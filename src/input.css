@@ -1,4 +1,23 @@
 @tailwind base;
+
+@layer base {
+    .btnIconLg{
+        @apply flex justify-center items-center gap-4 text-base font-LatoBold px-8 py-4 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+    }
+    .btnIcon{
+        @apply flex justify-center items-center gap-3 text-base font-LatoBold px-6 py-3 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+    }
+
+    .btnLg{
+        @apply text-base font-LatoBold px-8 py-4 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+    }
+
+    .btn{
+        @apply text-base font-LatoBold px-6 py-3 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+    }
+
+
+}
 @tailwind components;
 @tailwind utilities;
 
