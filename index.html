@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sm:scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -14,24 +14,32 @@
 
 <body>
     <header
-        class="px-16 py-6 flex items-center justify-between bg-white border-b  border-black-60 fixed top-0 w-full z-20">
-        <img src="./assets/images/logo.svg" alt="logo">
-        <ul class="flex items-center justify-evenly text-lead text-black-60  gap-x-10 ">
-            <li class="cursor-pointer  hover:text-black">Home</li>
-            <li class="cursor-pointer  hover:text-black">About</li>
-            <li class="cursor-pointer  hover:text-black">Product</li>
-            <li class="cursor-pointer  hover:text-black">Contact</li>
-        </ul>
-        <div class="flex items-cetner justify-center gap-10">
+        class="px-4 py-4 md:px-16 md:py-6 flex items-center justify-between  bg-white border-b  border-black-60 fixed top-0 w-full z-20">
+        <a href="#home" class="cursor-pointer">
+            <img src="./assets/images/logo.svg" alt="logo">
+        </a>
+
+        <nav class="hidden md:flex items-center justify-evenly text-lead text-black-60  gap-x-10 ">
+            <a href="#home" class="cursor-pointer  hover:text-black">Home</a>
+            <a href="#about" class="cursor-pointer  hover:text-black">About</a>
+            <a href="#product" class="cursor-pointer  hover:text-black">Product</a>
+            <a href="#contact" class="cursor-pointer  hover:text-black">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-cetner justify-center gap-10">
             <i class="bi bi-search text-icon cursor-pointer"></i>
             <i class="bi bi-heart text-icon cursor-pointer"></i>
             <i class="bi bi-bag text-icon cursor-pointer"></i>
         </div>
+        <div class="block md:hidden">
+            <div class="iconBtn">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
     </header>
-    <section class="bg-gray px-16 pt-40 flex p-36">
+    <section class="bg-gray px-4 md:px-16 pt-20 pb-4 md:pt-40 flex-col-reverse md:lex-col flex  md:p-36" id="home">
         <div class="flex justify-center flex-col gap-10 items-start max-w-lg z-10">
             <div class="flex gap-6 flex-col">
-                <h1 class="text-black text-title  font-LatoBold">
+                <h1 class="text-black text-title  font-LatoBold ">
                     Explore <span class="text-black-60">and</span> <span class="bg-gray">customize</span> <span
                         class="text-black-60">your own</span> style
                 </h1>
@@ -44,12 +52,12 @@
                 </button>
             </div>
         </div>
-        <div class="absolute top-28 left-[500px] flex  gap-4">
-            <img class="self-end pt-6" src="./assets/images/header_1.jpg" alt="girl wearing nike shoe" width="451">
-            <img class="self-start" src="./assets/images/header_2.jpg" alt="girl wearing nike shoe" width="324">
+        <div class=" md:absolute md:top-28 md:left-[500px] md:flex  gap-4">
+            <img class="self-end  md:w-[451px]" src="./assets/images/header_1.jpg" alt="girl wearing nike shoe" >
+            <img class="self-start hidden md:block md:w-[324px]" src="./assets/images/header_2.jpg" alt="girl wearing nike shoe" >
         </div>
     </section>
-    <section class="pt-44 px-16 flex justify-between">
+    <section class="pt-44 px-4 md:px-16 flex justify-between" id="about">
         <div class="flex flex-col max-w-[600px] gap-10">
             <h1 class="text-title-2 font-LatoBold text-black-60">Your <span class="text-black">satisfaction</span> is
                 our priority
@@ -78,23 +86,24 @@
                 </div>
             </div>
         </div>
-        <img class="h-[321px] object-cover" src="./assets/images/bg_1.jpg" alt="" width="522">
+        <img class="hidden h-[321px] object-cover md:flex" src="./assets/images/bg_1.jpg" alt="" width="522">
     </section>
-    <section class="pt-44 flex items-center justify-between gap-12 flex-col pb-4">
+    <section class="pt-44 flex  items-center  justify-between gap-12 flex-col pb-4" id="product">
         <h1 class="text-black-60 text-title-2 font-LatoBold text-center w-full">Choose your own <span
                 class="text-black">style</span></h1>
-        <div class="flex justify-between items-center py-4  border-b border-black w-full sticky top-0 z-30 bg-white px-16 ">
-            <div class="flex items-center justify-center gap-8 bg-gray px-8 py-3 w-[542px]">
-                <i class="bi bi-search text-icon"></i>
+        <div
+            class="flex justify-between items-center py-4  border-b border-black w-full sticky top-0 z-30 bg-white px-4 md:px-16 ">
+            <div class="flex items-center justify-center gap-8 bg-gray px-8 py-3 max-w-screen-sm md:w-1/2">
+                <i class="bi bi-search md:text-icon"></i>
                 <input type="text" class="text-base flex-1 outline-none  bg-gray " placeholder="Search by name or mark">
             </div>
-            <div class="flex gap-10">
-                <select name="trend" id="" class="text-base font-LatoBold px-8 py-4 bg-black text-white outline-0 ">
+            <div class="hidden md:flex gap-10">
+                <!-- <select name="trend" id="" class="text-base font-LatoBold px-8 py-4 bg-black text-white outline-0 ">
                     <option value="trend">Trend</option>
                     <option value="trend">Trends</option>
                     <option value="trend">Trends</option>
                     <option value="trend">Trends</option>
-                </select>
+                </select> -->
                 <select name="gender" id="" class="text-base font-LatoBold px-8 py-4 bg-black text-white outline-0 ">
                     <option value="trend">Gender</option>
                     <option value="trend">Trends</option>
@@ -108,8 +117,11 @@
                     <option value="trend">Trends</option>
                 </select>
             </div>
+            <div class=" iconBtn md:hidden ">
+                <i class="bi bi-filter-left text-icon text-white"></i>
+            </div>
         </div>
-        <div class="flex items-center justify-between w-full flex-wrap gap-y-10 px-16 pt-20">
+        <div class="flex items-center justify-center sm:justify-between w-full flex-wrap gap-y-10  px-4 md:px-16 pt-20">
             <div class="w-[260px] flex gap-y-4 relative flex-col">
                 <i class="bi bi-heart absolute top-3 right-3 text-icon cursor-pointer hover:text-white"></i>
                 <img class="h-[180px] contrast-[85%]" src="./assets/images/shoeModel_1.jpg" alt="" width="260">
@@ -212,6 +224,154 @@
             <i class="bi bi-three-dots"></i>
         </button>
     </section>
+    <section class="py-44">
+        <h1 class="px-4 md:px-16 text-center w-full text-title-2 font-LatoBold text-black-60 mb-10">What our <span
+                class="text-black">customer</span> say ?</h1>
+        <div class="ps-4 md:ps-16 flex justify-start items-center gap-8 overflow-x-scroll cursor-all-scroll __hide_sccrool">
+            <div class="flex flex-col gap-4 relative min-w-[80%] md:min-w-[540px]">
+                <div class="flex gap-4 flex-col md:flex-row review-top __line">
+                    <p class="text-subtitle-2 text-black">Nathan</p>
+                    <div class="flex items-center gap-2">
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                    </div>
+                </div>
+                <p class="text-base text-black ">
+                    An amazing website, the interface is geniunly smooth and easy to understand.
+                    I can effortlessly find a product and even customize it into my own style.
+                </p>
+            </div>
+            <div class="flex flex-col gap-4 relative min-w-[80%] md:min-w-[540px]">
+                <div class="flex  flex-col md:flex-row gap-4 review-top __line">
+                    <p class="text-subtitle-2 text-black">John Doe</p>
+                    <div class="flex items-center gap-2">
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                    </div>
+                </div>
+                <p class="text-base text-black">
+                    I am very pleased with the integration of the app to my store. No problems with moving products into
+                    the store. User friendly. I love that it has very trending fashions and accessories. It is
+                    reasonably priced for all the services that it provides.
+                </p>
+            </div>
+            <div class="flex flex-col gap-4 relative min-w-[80%] md:min-w-[540px]">
+                <div class="flex gap-4  flex-col md:flex-row review-top __line">
+                    <p class="text-subtitle-2 text-black">Jimmy</p>
+                    <div class="flex  items-center gap-2">
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                        <i class="bi bi-star-fill text-orange "></i>
+                    </div>
+                </div>
+                <p class="text-base text-black">
+                    I recommend anyone to use this for their store. Customer service is good and they offer many other
+                    services to help grow your business at a reasonable price. I would love to see them offer more edgy
+                    and trendy fashion in the future and also a full size collection would be great
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 md:px-16 flex items-start gap-10 flex-col " id="contact">
+        <h1 class="text-title-2 text-center md:text-start w-full  font-LatoBold text-black-60">
+            Have some <span class="text-black">feedback</span> ?
+        </h1>
+        <div class="flex justify-between flex-col md:flex-row items-center w-full gap-y-16">
+            <form action="" class="flex flex-col gap-10 items-center justify-center w-full md:w-1/2">
+                <div class="flex items-center justify-center gap-8 w-full">
+                    <input type="text" name="" id=""
+                        class="text-base py-4 px-8 bg-gray placeholder:text-black-60 outline-none w-full"
+                        placeholder="Enter your name">
+                </div>
+                <div class="flex items-center justify-center gap-8 w-full">
+                    <input type="text" name="" id=""
+                        class="text-base py-4 px-8 bg-gray placeholder:text-black-60 outline-none w-full"
+                        placeholder="Enter your email">
+                </div>
+                <textarea name="" id=""
+                    class="text-base w-full bg-gray outline-0 px-8 py-4 h-[184px] text-black-60 placeholder:text-black-60 resize-none"
+                    placeholder="Your message here"></textarea>
+                <button class="btn">Submit</button>
+            </form>
+            <div class="flex items-center gap-16">
+                <div class="flex flex-col gap-4 justify-center items-center">
+                    <i class="bi bi-geo-alt bg-black text-white p-4 text-icon"></i>
+                    <p class="text-center md:text-start text-base text-black">Madagascar, Fianarantsoa 301</p>
+                </div>
+                <div class="flex flex-col gap-4 justify-center items-center">
+                    <i class="bi bi-telephone bg-black text-white p-4 text-icon"></i>
+                    <p class="text-center md:text-start text-base text-black">+261 38 87 329 17</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 md:px-16 mt-44 py-20 bg-gray flex gap-y-10 items-center flex-col  justify-between md:flex-row">
+        <h1 class="text-center md:text-start text-title-2 font-LatoBold text-black-60 mx-w-[420px]">Subscribe for <span
+                class="text-black">newsletter</span> & <span class="text-black">update</span></h1>
+        <form class="flex items-center justify-center flex-col w-full gap-4 md:flex-row">
+            <input type="text" name="" id=""
+                class="text-base w-full text-black-60 bg-white px-8 py-4 outline-none placeholder:text-black-60"
+                placeholder="Your name">
+            <input type="text" name="" id=""
+                class="text-base w-full text-black-60 bg-white px-8 py-4 outline-none placeholder:text-black-60"
+                placeholder="Your email">
+            <button class="btnLg">Subscribe</button>
+        </form>
+    </section>
+    <footer class="px-4 md:px-16 py-10">
+        <div class="flex items-start flex-col md:flex-row justify-between gap-y-8">
+            <div class="flex flex-col gap-6 w-full md:w-auto text-center md:text-start">
+                <h1 class="text-black font-LatoBold text-subtitle">Product</h1>
+                <div class="flex md:items-start justify-start text-black text-lead flex-col ">
+                    <a href="" class="">Athletic Shoes</a>
+                    <a href="" class="">Casual Sneakers</a>
+                    <a href="" class="">High-Tops</a>
+                    <a href="" class="">Skate Shoes</a>
+                    <a href="" class="">Running Shoes</a>
+                    <a href="" class="">Fashion Sneakers</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 w-full md:w-auto text-center md:text-start">
+                <h1 class="text-black font-LatoBold text-subtitle">Featured product</h1>
+                <div class="flex  md:items-start md:justify-start text-black text-lead flex-col ">
+                    <a href="" class="">Athletic Shoes</a>
+                    <a href="" class="">Casual Sneakers</a>
+                    <a href="" class="">High-Tops</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 w-full md:w-auto text-center md:text-start">
+                <h1 class="text-black font-LatoBold text-subtitle">Company</h1>
+                <div class="flex md:items-start justify-start text-black text-lead flex-col ">
+                    <a href="" class="">About us</a>
+                    <a href="" class="">Contact us</a>
+                    <a href="" class="">Our newletter</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 w-full md:w-auto text-center md:text-start">
+                <h1 class="text-black font-LatoBold text-subtitle">Follow us</h1>
+                <div class="flex items-center justify-start text-black text-lead flex-col ">
+                    <a href="" class="">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="" class="">
+                        <i class="bi bi-pinterest"></i>
+                    </a>
+                    <a href="" class="">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="text-black-60 w-full text-center mt-6">Copyright Trends, 2024</p>
+    </footer>
 </body>
 
 </html>

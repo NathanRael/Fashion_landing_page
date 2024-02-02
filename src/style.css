@@ -7,3 +7,17 @@
     font-family: 'LatoBold';
     src: url('../assets/fonts/Lato-Bold.ttf');
 }
+
+.__line::before{
+    position: absolute;
+    top: 40px;
+    content: "";
+    background-color: #767373;
+    height: 1px;
+    overflow : hidden;
+    width: 120px;
+}
+
+.__hide_sccrool::-webkit-scrollbar{
+    height: 0;
+}
