@@ -2,22 +2,26 @@
 
 @layer base {
     .btnIconLg{
-        @apply flex justify-center items-center gap-4 text-base font-LatoBold px-8 py-4 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+        @apply flex justify-center items-center gap-4 text-base font-LatoBold px-8 py-4 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black transition duration-200
     }
     .btnIcon{
-        @apply flex justify-center items-center gap-3 text-base font-LatoBold px-6 py-3 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+        @apply flex justify-center items-center gap-3 text-base font-LatoBold px-6 py-3 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black transition duration-200
     }
 
     .btnLg{
-        @apply text-base font-LatoBold px-8 py-4 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+        @apply text-base font-LatoBold px-8 py-4 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black transition duration-200
     }
 
     .btn{
-        @apply text-base font-LatoBold px-6 py-3 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black
+        @apply text-base font-LatoBold px-6 py-3 cursor-pointer border border-black bg-black text-white hover:bg-white hover:text-black transition duration-200
     }
 
     .iconBtn{
-        @apply flex justify-center items-center text-icon p-3 w-11 h-11 bg-black text-white hover:text-black hover:bg-white 
+        @apply flex cursor-pointer justify-center items-center text-icon p-3 w-11 h-11 bg-black text-white hover:text-black hover:bg-white hover:border hover:border-black-60  transition duration-200
+    }
+
+    .default-trans{
+        @apply transition duration-200
     }
 
 
